@@ -1,4 +1,5 @@
 @import './variables.scss';
+@import './mixin.scss';
 
 footer {
   @include container;
@@ -34,10 +35,18 @@ footer {
       }
       
     }
-    >div input[type="radio"]:checked+label {
-      padding: 0.15rem 0.5rem;
-      border: 1px solid $_800;
-      border-radius: 0.5rem;
+    >div input[type="radio"] {
+      &:checked+label {
+        padding: 0.15rem 0.5rem;
+        border: 1px solid $_800;
+        border-radius: 0.5rem;
+      }
     }
+  }
+}
+
+@media screen and (max-width: 381px) {
+  footer {
+    padding: 0 0.55rem;
   }
 }

@@ -2,9 +2,11 @@
   "name": "todo-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://danilimi.github.io/todo-app",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "github": "gh-pages -d dist",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint"
@@ -31,6 +33,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.0.3",
+    "gh-pages": "^4.0.0",
     "jest": "^27.0.5",
     "prettier": "^2.4.1",
     "sass": "^1.32.7",
