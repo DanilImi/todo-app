@@ -1,0 +1,43 @@
+@import './variables.scss';
+
+footer {
+  @include container;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $_300;
+  >span {
+    color: $_800;
+    opacity: 42%;
+    font-family: $font_family_600;
+  }
+  >div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 12.75rem;
+    >div input[type="radio"]{
+      display: none;
+    }
+    >div label {
+      display: inline-block;
+      color: $_800;
+      opacity: 42%;
+      font-family: $font_family_600;
+      cursor: pointer;
+      
+      &:hover {
+        color: $_600;
+        transition: .3s ease-in-out;
+      }
+      
+    }
+    >div input[type="radio"]:checked+label {
+      padding: 0.15rem 0.5rem;
+      border: 1px solid $_800;
+      border-radius: 0.5rem;
+    }
+  }
+}

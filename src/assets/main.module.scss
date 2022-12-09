@@ -1,0 +1,163 @@
+@import './variables.scss';
+
+main {
+  width: 100%;
+  background-color: $_100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accordion {
+  .accordionTask {
+    margin-top: 1.25rem;
+    width: 24rem;
+  }
+  .accHeader {
+    @include accordion($_200, $_300, $_300, $_400, $_200, $_400, $_800, 0, 0.5rem 0.5rem 0 0);
+  }
+  
+  /*
+  .acc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 24rem;
+    height: 2.5rem;
+    padding: 0 1rem;
+    background-color: $_200;
+    >button {
+      width: 1.2rem;
+      height: 1.2rem;
+      background-color: transparent;
+      border: 0.075rem solid $_300;
+      border-radius: 0.25rem;
+      .btn {
+        width: 1.2em;
+        height: 1.2rem;
+        position: relative;
+        cursor: pointer;
+        &::before {
+          content: '+';
+          color: $_300;
+          position: absolute;
+          transform: rotate(45deg);
+          font-size: 30px;
+          line-height: 1;
+          top: -4px;
+          left: 2px;
+        }
+      }
+    }
+    .wrapperCheck {
+      width: 5.3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      >input[type='checkbox']:after{
+        line-height: 1.5em;
+        content: '';
+        display: inline-block;
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-top: -4px;
+        margin-left: -4px;
+        border: 0.05rem solid $_400;
+        border-radius: 0.25rem;
+        background: $_200;
+        cursor: pointer;
+      }
+    
+      >input[type='checkbox']:checked:after {
+        width: 1.2rem;
+        height: 1.2rem;
+        background: url('~/src/assets/img/check.png') no-repeat center, $_300;
+        border: 0;
+      }
+      >span {
+        color: $_800;
+        font-family: $font_family_600;
+      }
+    }
+  }
+  */
+  .accordionItem {
+    @include accordion(#FFECD7, $_200, $_200, $_300, #FFECD7, $_300, $_800, 1px, 0);
+  }
+  .inputTask {
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    background-color: #FFECD7;
+    padding: 0 1rem;
+    border: 1px solid $_200;
+    border-width: 0 1px 1px 1px;
+    border-radius: 0 0 0.5rem 0.5rem;
+    >button {
+      @include position;
+      width: 1.2rem;
+      height: 1.2rem;
+      color: $_300;
+      background-color: transparent;
+      padding: 0.35rem;
+      border: 0.075rem solid $_300;
+      border-radius: 0.25rem;
+    }
+    >input {
+      width: 100%;
+      height: 1.4rem;
+      margin-left: 1.15rem;
+      background-color: transparent;
+      &::placeholder {
+        transform: translateY(0.1rem);
+        color: $_300;
+        font-size: 1rem;
+        font-family: $font_family_400;
+      }
+    }
+  }
+}
+
+.InputFooter {
+  @include position;
+  width: 24rem;
+  height: 2.5rem;
+  margin: 1.25rem 0;
+  background-color: #FFEBD7;
+  border: 0.075rem dashed #FFCA93;
+  border-radius: 0.5rem;
+  >input {
+    text-align: center;
+    width: 100%;
+    height: 1.4rem;
+    background-color: transparent;
+    &::placeholder {
+      transform: translateY(0.1rem);
+      color: $_300;
+      font-size: 1rem;
+      font-family: $font_family_400;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .accordion {
+    .accordionTask {
+      width: 20rem;
+    }
+  }
+  .InputFooter {
+    width: 20rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .accordion {
+    .accordionTask {
+      width: 15rem;
+    }
+  }
+  .InputFooter {
+    width: 15rem;
+  }
+}
