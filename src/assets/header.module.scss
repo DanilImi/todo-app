@@ -1,0 +1,15 @@
+@import './variables.scss';
+@import './mixin.scss';
+
+header {
+  width: 100%;
+  height: 50px;
+  @include position;
+  background-color: $_300;
+
+  .title {
+    color: $_800;
+    font-family: $font_family_600;
+  }
+}
+

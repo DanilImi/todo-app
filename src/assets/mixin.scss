@@ -1,0 +1,82 @@
+@mixin container() {
+  padding: 0 1.5rem;
+}
+
+@mixin position {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin accordion($bg1, $bg2, $bg3, $bg4, $bg5, $bg6, $bg7, $border, $borderRadius) {
+  .acc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2.5rem;
+    padding: 0 1rem;
+    background-color: $bg1;
+    border: $border solid $_200;
+    border-width: 0 1px 1px 1px;
+    border-radius: $borderRadius;
+    >button {
+      width: 1.2rem;
+      height: 1.2rem;
+      background-color: transparent;
+      border: 0.075rem solid $bg2;
+      border-radius: 0.25rem;
+      .btn {
+        width: 1.2em;
+        height: 1.2rem;
+        position: relative;
+        cursor: pointer;
+        &::before {
+          content: '+';
+          color: $bg3;
+          position: absolute;
+          transform: rotate(45deg);
+          font-size: 30px;
+          line-height: 1;
+          top: -4px;
+          left: 2px;
+        }
+      }
+    }
+    .wrapperCheck {
+      width: 5.3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      >input[type='checkbox']{
+        &::after {
+          line-height: 1.5em;
+          content: '';
+          display: inline-block;
+          width: 1.2rem;
+          height: 1.2rem;
+          margin-top: -4px;
+          margin-left: 0px;
+          border: 0.05rem solid $bg4;
+          border-radius: 0.25rem;
+          background: $bg5;
+          cursor: pointer;
+        }
+      }
+    
+      >input[type='checkbox'] {
+        &:checked {
+          &::after {
+            width: 1.2rem;
+            height: 1.2rem;
+            background: url('~/src/assets/img/check.png') no-repeat center, $bg6;
+            border: 0;
+          }
+        }
+      }
+      >span {
+        color: $bg7;
+        font-family: $font_family_600;
+      }
+    }
+  }
+}
