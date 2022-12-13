@@ -1,0 +1,44 @@
+@import '../../../assets/variables.scss';
+@import '../../../assets/mixin.scss';
+
+main {
+  width: 100%;
+  background-color: $_100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accordion {
+  .accordionTask {
+    margin-top: 1.25rem;
+    width: 24rem;
+  }
+
+  .invisible {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+  }
+  .visible {
+    visibility: visible;
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .accordion {
+    .accordionTask {
+      width: 20rem;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .accordion {
+    .accordionTask {
+      width: 15rem;
+    }
+  }
+}

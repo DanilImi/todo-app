@@ -1,0 +1,24 @@
+@import "../../../assets/variables.scss";
+
+.footerInput {
+  >input[type="radio"] {
+    display: none;
+    &:checked+label {
+      padding: 0.15rem 0.5rem;
+      border: 1px solid $_800;
+      border-radius: 0.5rem;
+    }
+  }
+  >label {
+    display: inline-block;
+    color: $_800;
+    opacity: 42%;
+    font-family: $font_family_600;
+    cursor: pointer;
+
+    &:hover {
+      color: $_600;
+      transition: .3s ease-in-out;
+    }
+  }
+}
