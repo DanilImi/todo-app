@@ -1,0 +1,17 @@
+@import '../../../assets/variables.scss';
+@import '../../../assets/mixin.scss';
+
+
+.header {
+  @include accordion($_200, $_300, $_300, $_400, $_200, $_400, $_800, 0, 0.5rem);
+}
+.task {
+  @include accordion(#FFECD7, $_200, $_200, $_300, #FFECD7, $_300, $_800, 1px, 0);
+}
+
+.bRadius {
+  @include accordion($_200, $_300, $_300, $_400, $_200, $_400, $_800, 0, 0.5rem 0.5rem 0 0);
+}
+.cPointer {
+  cursor: pointer;
+}
